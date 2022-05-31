@@ -17,6 +17,6 @@ public class EmailFromJavaApplication {
 
 	@EventListener(ApplicationReadyEvent.class)
 	public void sendMail(){
-		senderService.sendEmail("dace.dosberga@gmail.com","ALERT!!!","Internet connection lost!");
+		senderService.sendEmail("dace.dosberga@gmail.com","Internet connection is lost!","Unfortunately, we are experiencing that your internet connection is down.");
 	}
 }
