@@ -30,16 +30,15 @@ public class Main {
         while (true) {
             TimeUnit.SECONDS.sleep(5);
             try {
-                testSpeed();
+                testSpeed(url);
                 System.out.println("------------------------");
             } catch (IOException e) {
-                //INSERT SEND EMAIL FUNCTION HERE
-                break;
+                throw new IOException(e);
             }
         }
     }
 
-    public static void testSpeed () throws IOException {
+    public static void testSpeed (String url) throws IOException {
 
         long totalDownload = 0; // total bytes downloaded
         final int BUFFER_SIZE = 1024; // size of the buffer
@@ -48,7 +47,7 @@ public class Main {
         long startTime = System.nanoTime(); // starting time of download
 
         BufferedInputStream in = new BufferedInputStream(
-                new URL("https://www.ss.com/")
+                new URL(url)
                         .openStream());
 
         while ((dataRead = in.read(data, 0, 1024)) > 0) {
