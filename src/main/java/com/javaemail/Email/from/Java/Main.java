@@ -1,5 +1,4 @@
 package com.javaemail.Email.from.Java;
-
 import java.net.InetAddress;
 import java.net.InterfaceAddress;
 import java.util.Scanner;
@@ -34,7 +33,6 @@ public class Main {
             try {
                 reachable();
                 testSpeed(url);
-              
                 System.out.println("------------------------");
                 TimeUnit.SECONDS.sleep(3);
             } catch (IOException e) {
