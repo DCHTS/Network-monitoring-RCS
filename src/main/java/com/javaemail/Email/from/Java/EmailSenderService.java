@@ -19,7 +19,7 @@ public class EmailSenderService {
 
         mailSender.send(message);
 
-        System.out.println("Mail sent successfully!");
+        System.out.println("E-Mail sent successfully!");
 
     }
 }
