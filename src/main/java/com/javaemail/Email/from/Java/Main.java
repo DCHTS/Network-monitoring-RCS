@@ -1,5 +1,7 @@
 package com.javaemail.Email.from.Java;
 
+import java.net.InetAddress;
+import java.net.InterfaceAddress;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -28,10 +30,13 @@ public class Main {
 
 
         while (true) {
-            TimeUnit.SECONDS.sleep(5);
+//                TimeUnit.SECONDS.sleep(3);
             try {
+                reachable();
                 testSpeed(url);
+              
                 System.out.println("------------------------");
+                TimeUnit.SECONDS.sleep(3);
             } catch (IOException e) {
                 throw new IOException(e);
             }
@@ -72,4 +77,15 @@ public class Main {
         double mbPerSec = kbPerSec / (1024);
         System.out.println(mbPerSec + " MBps ");
     }
+    public static void reachable () throws IOException {
+        try {
+            InetAddress add = InetAddress.getByName("www.ss.com");
+            boolean reachable = add.isReachable(10000);
+
+            System.out.println("Is reachable or not? " + reachable);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
