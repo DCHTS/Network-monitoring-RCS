@@ -12,18 +12,18 @@ public class Main {
 
         Scanner s = new Scanner(System.in);
 
-        System.out.println("INTERNETA ĀTRUMA MĒRĪTĀJS");
+        System.out.println("NETWORK SPEED TESTER");
 
-        System.out.println("1. Ievadi savu vārdu:");
+        System.out.println("1. Enter your name:");
         String name = s.nextLine();
 
-        System.out.println("2. Ievadi savu e-pasta adresi:");
+        System.out.println("2. Enter your e-mail address:");
         String mail = s.nextLine();
 
-        System.out.println("3. Ievadi mājas lapu, kuru vēlies mērīt:");
+        System.out.println("3. Enter the website you want to measure:");
         String url = s.nextLine();
 
-        System.out.println("Mājas lapas  " + url + "interneta ātrums:");
+        System.out.println("Websites  " + url + "network speed is:");
 
 
 
